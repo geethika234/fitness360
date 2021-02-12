@@ -8,8 +8,11 @@ from forms import (HealthMonitorForm, DietExerciseSuggestionForm,
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'a random string'
 
+#assigning calorie values to food  
 cals={12:'Apple', 137:'Rice', 60:'Chocolate', 175:'Cake', 19:'Orange'}
-exer={12:'Walking',137:'Running', 60:'Jogging', 175:'Yoga', 19:'Weight Lifting'}
+
+#assigning calories burnt values to exercises.
+exer={23:'Walking',143:'Running', 92:'Jogging', 188:'Yoga', 104:'Weight Lifting'}
 
 @app.route('/')
 def index():
