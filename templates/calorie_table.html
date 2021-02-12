@@ -1,0 +1,26 @@
+{% extends 'calorie_count.html' %}
+{% block content %}
+<head> <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"></head>
+<h3>Items consumed today</h3>
+
+<div class="row">
+	<div class="col-md">
+		<div class="card card-body">
+			<table class="table table-sm">
+				<tr>
+					<th>fooditem</th>
+					<th>Quantity</th>
+					<th>Calorie</th>
+				</tr>
+				{% for food in fooditem %}
+				<tr>
+					<td>{{food[1]}}</td>
+					<td> {{food[2]}}</td>
+					<td> {{food[3]}}</td>
+					</tr>
+				{% endfor %}
+			</table>
+		</div>
+	</div>
+</div>
+{% endblock %}
